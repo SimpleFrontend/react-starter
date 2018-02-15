@@ -12,7 +12,6 @@
         "build": "react-scripts build",
         "test": "react-scripts test --env=jsdom",
         "eject": "react-scripts eject",
-        "format": "cross-env BABEL_ENV=development prettier --write \"**/*.{js,jsx,json,css,md}\"",
         "precommit": "lint-staged"
     },
     "devDependencies": {
@@ -41,12 +40,10 @@
         "prettier": "^1.10.2",
         "prop-types": "^15.6.0"
     },
-    "pre-commit": [
-        "format"
-    ],
+    "pre-commit": ["precommit"],
     "lint-staged": {
         "**/*.{js, jsx,json,css,md}": [
-            "yarn format",
+            "cross-env BABEL_ENV=development prettier --write",
             "git add"
         ]
     }
