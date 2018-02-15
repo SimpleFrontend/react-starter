@@ -1,14 +1,5 @@
 {
     "parser": "babel-eslint",
-    "extends": [
-        "plugin:react/recommended",
-        "airbnb"
-    ],
-    "env": {
-        "es6": true,
-        "jest": true,
-        "browser": true
-    },
     "parserOptions": {
         "ecmaVersion": 6,
         "sourceType": "module",
@@ -18,57 +9,88 @@
             "experimentalObjectRestSpread": true
         }
     },
-    "plugins": [
-        "react",
-        "prettier"
-    ],
+    "extends": ["plugin:react/recommended", "airbnb", "eslint-config-prettier"],
+    "plugins": ["eslint-plugin-prettier", "react", "jsx-a11y", "import"],
+    "env": {
+        "es6": true,
+        "jest": true,
+        "browser": true
+    },
     "rules": {
-        "arrow-parens": [2,"as-needed"],
-        "camelcase": [2,{"properties":"always"}],
-        "comma-dangle": [2,"never"],
-        "complexity": [1,15],
-        "curly": [2,"all"],
+        "semi": ["error", "always"],
+        "react/sort-comp": "off",
+        "react/require-default-props": 1,
+        "react/jsx-filename-extension": ["error", {"extensions": [".js"]}],
+        "react/jsx-wrap-multilines": "off",
+        "react/jsx-indent": [2, 4],
+        "import/no-extraneous-dependencies": "off",
+        "arrow-parens": [2, "as-needed"],
+        "camelcase": [2, {"properties": "always"}],
+        "comma-dangle": [2, "never"],
+        "complexity": [1, 15],
+        "curly": [2, "all"],
         "eol-last": 0,
         "func-style": [1, "expression"],
-        "import/extensions": [1, "never" ],
+        "import/extensions": [1, "never"],
         "import/prefer-default-export": 2,
-        "indent": [1, 4, { "SwitchCase": 1 }],
-        "jsx-quotes": [1, "prefer-single"],
+        "indent": [1, 4, {"SwitchCase": 1}],
         "linebreak-style": 0,
-        "lines-around-comment": [1,{"beforeBlockComment":true,"afterBlockComment":false,"beforeLineComment":true,"afterLineComment":false,"allowBlockStart":true,"allowBlockEnd":true}],
-        "max-depth": [1,4],
-        "max-len":  [1, 140, 2, { "ignoreUrls": true, "ignoreComments": false, "ignoreRegExpLiterals": true, "ignoreStrings": true, "ignoreTemplateLiterals": true }],
-        "max-nested-callbacks": [1,10],
-        "max-params": [1,5],
-        "max-statements": [1,10],
+        "lines-around-comment": [
+            1,
+            {
+                "beforeBlockComment": true,
+                "afterBlockComment": false,
+                "beforeLineComment": true,
+                "afterLineComment": false,
+                "allowBlockStart": true,
+                "allowBlockEnd": true
+            }
+        ],
+        "max-depth": [1, 4],
+        "max-len": [
+            1,
+            140,
+            2,
+            {
+                "ignoreUrls": true,
+                "ignoreComments": false,
+                "ignoreRegExpLiterals": true,
+                "ignoreStrings": true,
+                "ignoreTemplateLiterals": true
+            }
+        ],
+        "max-nested-callbacks": [1, 10],
+        "max-params": [1, 5],
+        "max-statements": [1, 10],
         "no-bitwise": 1,
-        "no-cond-assign": [2,"except-parens"],
+        "no-cond-assign": [2, "except-parens"],
         "no-confusing-arrow": 0,
-        "no-constant-condition": [1, { "checkLoops": false }],
+        "no-constant-condition": [1, {"checkLoops": false}],
         "no-debugger": 1,
         "no-empty-character-class": 1,
-        "no-extra-parens": [1, "all", { "ignoreJSX": "all" }],
-        "no-implicit-coercion": [1,{"boolean":true,"number":true}],
-        "no-irregular-whitespace": [1, { "skipRegExps": true }],
-        "no-multiple-empty-lines": [1,{"max":2}],
+        "no-extra-parens": [1, "all", {"ignoreJSX": "all"}],
+        "no-implicit-coercion": [1, {"boolean": true, "number": true}],
+        "no-irregular-whitespace": [1, {"skipRegExps": true}],
+        "no-multiple-empty-lines": [1, {"max": 2}],
         "no-negated-in-lhs": 1,
-        "no-param-reassign": [2,{"props":true}],
+        "no-param-reassign": [2, {"props": true}],
         "no-undefined": 1,
         "no-unused-vars": 1,
-        "no-warning-comments": [1,{"terms":["todo"],"location":"anywhere"}],
-        "object-curly-spacing": [1,"never",{"arraysInObjects":true,"objectsInObjects":true}],
-        "operator-linebreak": [1,"after"],
-        "quotes": [1,"single","avoid-escape"],
-        "react/display-name": [1,{ "ignoreTranspilerName": false }],
+        "no-warning-comments": [1, {"terms": ["todo"], "location": "anywhere"}],
+        "object-curly-spacing": [
+            1,
+            "never",
+            {"arraysInObjects": true, "objectsInObjects": true}
+        ],
+        "operator-linebreak": [1, "after"],
+        "react/display-name": [1, {"ignoreTranspilerName": false}],
         "react/jsx-closing-bracket-location": 0,
         "react/jsx-indent-props": [1, 4],
-        "react/jsx-indent": [1, 4],
-        "react/jsx-filename-extension": 0,
-        "react/require-default-props": 1,
         "jsx-a11y/href-no-hash": 0,
         "jsx-a11y/alt-text": 1,
         "jsx-a11y/no-static-element-interactions": 1,
         "prettier/prettier": 1,
+        "quotes": [1, "single", "avoid-escape"],
         "react/jsx-key": 1,
         "react/jsx-no-literals": 0,
         "react/no-direct-mutation-state": 1,
@@ -76,8 +98,8 @@
         "space-unary-ops": [
             1,
             {
-                "words":true,
-                "nonwords":true,
+                "words": true,
+                "nonwords": true,
                 "overrides": {
                     "!": false,
                     "++": false,
@@ -95,10 +117,5 @@
         "import/no-unresolved": [2, {"caseSensitive": false}],
         "no-underscore-dangle": 0,
         "func-names": [1, "as-needed"]
-    },
-    "settings": {
-        "import/resolver": {
-            "webpack": {}
-        }
     }
 }

@@ -3,9 +3,11 @@ This project was a clean starter project bootstrapped with [Create React App](ht
 # Customization
 
 My preferred settings:
-- Singule quotation mark
-- 4 spaces indentation
+
+* Singule quotation mark
+* 4 spaces indentation
 
 # Linting
-- eslint
-- markdownlint
+
+* eslint
+* markdownlint

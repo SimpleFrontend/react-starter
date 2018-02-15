@@ -1,0 +1,22 @@
+{
+    "plugins": ["transform-class-properties", "transform-object-rest-spread"],
+    "presets": [["env", {"modules": false, "loose": true}], "react"],
+    "env": {
+        "development": {
+            "plugins": ["react-hot-loader/babel"]
+        },
+        "production": {
+            "plugins": [
+                "transform-react-remove-prop-types",
+                "transform-react-inline-elements",
+                "transform-react-constant-elements"
+            ]
+        },
+        "test": {
+            "plugins": [
+                "transform-es2015-modules-commonjs",
+                "transform-runtime"
+            ]
+        }
+    }
+}
