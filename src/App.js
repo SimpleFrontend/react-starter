@@ -1,4 +1,5 @@
 import React from 'react';
+import {DatePicker} from 'antd';
 import logo from './logo.svg';
 import './App.css';
 
@@ -11,6 +12,9 @@ const App = () => (
         <p className="App-intro">
             To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <div>
+            <DatePicker />
+        </div>
     </div>
 );
 
