@@ -25,7 +25,7 @@
     "import/no-extraneous-dependencies": "off",
     "arrow-parens": [2, "as-needed"],
     "camelcase": [2, { "properties": "always" }],
-    "comma-dangle": [2, "never"],
+    "comma-dangle": [2, "always-multiline"],
     "complexity": [1, 15],
     "curly": [2, "all"],
     "eol-last": 0,
