@@ -14,7 +14,8 @@
     "build": "react-app-rewired build",
     "test": "react-app-rewired test --env=jsdom",
     "eject": "react-scripts eject",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "format": "cross-env BABEL_ENV=development prettier --write \"src/**/*\""
   },
   "devDependencies": {
     "babel-eslint": "^8.0.3",
