@@ -5,6 +5,7 @@
   "dependencies": {
     "antd": "^3.2.2",
     "immutable": "^3.8.2",
+    "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts": "1.1.1"
@@ -24,6 +25,8 @@
     "eslint": "^4.13.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
+    "eslint-config-react-app": "^2.1.0",
+    "eslint-plugin-flowtype": "^2.46.1",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.6.0",
@@ -33,7 +36,6 @@
     "less-loader": "^4.0.5",
     "lint-staged": "^6.1.0",
     "prettier": "^1.10.2",
-    "prop-types": "^15.6.0",
     "react-app-rewire-less": "^2.1.0",
     "react-app-rewired": "^1.4.1",
     "webpack": "^3.11.0"
