@@ -41,14 +41,13 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged && yarn test"
     }
   },
   "lint-staged": {
     "**/*.{js, jsx,json,css,md}": [
       "cross-env BABEL_ENV=development prettier --write",
-      "git add",
-      "yarn test"
+      "git add"
     ]
   }
 }
