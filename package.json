@@ -13,7 +13,8 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "test": "CI=true react-app-rewired test --env=jsdom",
+    "test": "react-app-rewired test --env=jsdom",
+    "testCI": "CI=true yarn test",
     "eject": "react-scripts eject",
     "format": "cross-env BABEL_ENV=development prettier --write \"src/**/*\""
   },
@@ -41,7 +42,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && yarn test"
+      "pre-commit": "lint-staged && yarn testCI"
     }
   },
   "lint-staged": {
