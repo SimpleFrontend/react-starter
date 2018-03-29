@@ -13,9 +13,8 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "test": "react-app-rewired test --env=jsdom",
+    "test": "CI=true react-app-rewired test --env=jsdom",
     "eject": "react-scripts eject",
-    "precommit": "lint-staged",
     "format": "cross-env BABEL_ENV=development prettier --write \"src/**/*\""
   },
   "devDependencies": {
@@ -31,7 +30,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.6.1",
-    "husky": "^0.14.3",
+    "husky": "^0.15.0-rc.13",
     "less": "^2.3.1",
     "less-loader": "^4.0.5",
     "lint-staged": "^6.1.0",
@@ -42,13 +41,14 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && npm test"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
     "**/*.{js, jsx,json,css,md}": [
       "cross-env BABEL_ENV=development prettier --write",
-      "git add"
+      "git add",
+      "yarn test"
     ]
   }
 }
