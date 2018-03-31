@@ -11,19 +11,16 @@ type State = {
 };
 
 class MyComponent extends React.Component<Props, State> {
-  state = {
+  static state = {
     count: 0,
     hoo: 1,
   };
-  render() {
-    const a = this.props.foo;
-    const b = this.state.count;
-    const c = this.state.hoo;
-    console.log(a);
-    console.log(b);
-    console.log(c);
 
-    return <div>{this.props.bar}</div>;
+  render() {
+    const { foo, bar, ...props } = this.props;
+    const { count, hoo } = this.state;
+
+    return <div {...props}>{bar + hoo + count}</div>;
   }
 }
 
