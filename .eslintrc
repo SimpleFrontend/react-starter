@@ -19,7 +19,7 @@
   "rules": {
     "jsx-a11y/href-no-hash": 0,
     "no-use-before-define": [2, "nofunc"],
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
     "prettier/prettier": 0
   }
 }
