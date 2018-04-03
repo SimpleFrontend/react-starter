@@ -8,6 +8,7 @@ type Props = {
 
 type State = {
   count: number,
+  hoo: number,
 };
 
 class MyComponent extends React.Component<Props, State> {

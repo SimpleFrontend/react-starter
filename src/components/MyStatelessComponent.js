@@ -3,11 +3,11 @@ import * as React from 'react';
 
 type Props = {
   foo: number,
-  bar: ?string,
+  bar: string,
   hoo: string,
 };
 
-const MyStatelessComponent = ({ foo, bar, ...props }: Props) => (
+const MyStatelessComponent = ({ foo, bar = 'BAR', ...props }: Props) => (
   <div {...props}>{foo || bar + props.hoo}</div>
 );
 
