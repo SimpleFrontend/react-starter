@@ -6,9 +6,10 @@
     "babel-plugin-emotion": "^9.1.0",
     "emotion": "^9.1.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "react-dom": "^16.2.1",
     "react-emotion": "^9.1.0",
-    "react-scripts": "1.1.1"
+    "react-scripts": "1.1.1",
+    "snyk": "^1.116.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -16,7 +17,9 @@
     "test": "react-scripts test --env=jsdom",
     "testCI": "CI=true yarn test",
     "eject": "react-scripts eject",
-    "format": "cross-env BABEL_ENV=development prettier --write \"src/**/*\""
+    "format": "cross-env BABEL_ENV=development prettier --write \"src/**/*\"",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "cross-env": "^5.1.3",
@@ -36,5 +39,6 @@
       "cross-env BABEL_ENV=development prettier --write",
       "git add"
     ]
-  }
+  },
+  "snyk": true
 }
