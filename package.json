@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "babel-plugin-emotion": "^9.1.0",
+    "babel-plugin-emotion": "^9.2.9",
     "emotion": "^9.1.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.1",
